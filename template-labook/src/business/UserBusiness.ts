@@ -1,4 +1,6 @@
 import { UserDatabase } from "../data/UserDatabase";
+import { CustomError } from "../error/CustomError";
+import { InvalidEmail, InvalidPassword, NotEmail, NotName, NotPassword } from "../error/UserError";
 import { user } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userDTO";
 import { generateId } from "../service/idGenerator";
@@ -9,15 +11,15 @@ export class UserBusiness {
             const {name, email, password} = input;
 
             if (!name){
-                throw new Error("Preencha o nome do usuário");
+                throw new NotName;
             }else if(!email){
-                throw new Error("Preencha o email do usuário");
+                throw new NotEmail;
             }else if(!password){
-                throw new Error("Preencha a senha do usuário");
+                throw new NotPassword;
             }else if(!email.includes("@")){
-                throw new Error("Formato de email não é válido.");
+                throw new InvalidEmail
             }else if(password.length <=6){
-                throw new Error("Senha precisa ter no mínimo 6 caracteres");
+                throw new InvalidPassword;
             }
 
             const id = generateId()
@@ -31,7 +33,7 @@ export class UserBusiness {
             const userDatabase = new UserDatabase()
             await userDatabase.insertUser(user);
         }catch(error: any){
-            throw new Error(error.message)
+            throw new CustomError(error.statusCode, error.message)
         }
     }
 }
