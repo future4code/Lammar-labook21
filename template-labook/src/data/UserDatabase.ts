@@ -1,3 +1,4 @@
+import { CustomError } from "../error/CustomError";
 import { user } from "../model/user/user";
 import { BaseDatabase } from "./BaseDatabase";
 
@@ -12,7 +13,7 @@ export class UserDatabase extends BaseDatabase{
                 password: user.password
             }).into('labook_users')
         } catch(error:any){
-            throw new Error(error.mensage);
+            throw new CustomError(error.statusCode, error.message)
         }
     }
 }
