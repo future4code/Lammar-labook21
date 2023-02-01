@@ -2,8 +2,8 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "Bruna",
-    "email": "brubzz@Labenu.com.br",
+    "name": "Bruna2",
+    "email": "brubzz2@Labenu.com.br",
     "password": "12345689"
 }
 
@@ -13,7 +13,8 @@ POST http://localhost:3003/post/create
 Content-Type: application/json
 
 {
-    "name": "Bruna",
-    "email": "brubzz@Labenu.com.br",
-    "password": "12345689"
+    "photo": "pracatiradentes.png",
+    "description": "Imagem da praça tiradentes de Curitiba",
+    "type": "normal",
+    "author_id": "f08a8e98-88a5-42ac-a6cc-67fc49277652"
 }

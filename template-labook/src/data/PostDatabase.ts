@@ -1,5 +1,5 @@
 import { CustomError } from "../error/CustomError";
-import { post } from "../model/post";
+import { post } from "../model/post/post";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class PostDataBase extends BaseDatabase{
@@ -11,8 +11,7 @@ export class PostDataBase extends BaseDatabase{
                 photo: post.photo,
                 description: post.description,
                 type: post.type,
-                createdAt: post.createdAt,
-                authorId: post.authorId
+                author_id: post.author_id
             }).into('labook_posts')
         } catch(error:any){
             throw new CustomError(error.statusCode, error.message)

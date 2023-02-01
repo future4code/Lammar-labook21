@@ -1,43 +1,17 @@
-import express, { Express } from "express"
-import cors from "cors"
+import express from 'express'
+import cors from 'cors'
 
 /**************************** CONFIG ******************************/
 
 
-export const app: Express = express()
+export const app = express()
 
 app.use(express.json())
 app.use(cors())
 
 /**************************** ENDPOINTS ******************************/
 
-/* app.post('/post', async (req: Request, res: Response) => {
-   try {
-      let message = "Success!"
-
-      const { photo, description, type, authorId } = req.body
-
-      const postId: string = Date.now().toString()
-
-      await connection("labook_posts")
-         .insert({
-            id:postId,
-            photo,
-            description,
-            type,
-            author_id: authorId
-         })
-
-      res.status(201).send({ message })
-
-   } catch (error:any) {
-      let message = error.sqlMessage || error.message
-      res.statusCode = 400
-      res.send({ message })
-   }
-})
-
-app.get('/posts/:id', async (req: Request, res: Response) => {
+/* app.get('/posts/:id', async (req: Request, res: Response) => {
    try {
       let message = "Success!"
 
@@ -69,7 +43,7 @@ app.get('/posts/:id', async (req: Request, res: Response) => {
       res.statusCode = 400
       res.send({ message })
    }
-}) */
+})  */
 
 /**************************** SERVER INIT ******************************/
 
