@@ -2,9 +2,9 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "Ludimilla",
-    "email": "lud@numanice.com.br",
-    "password": "amoabruna"
+    "name": "Bruna",
+    "email": "brubzz@Labenu.com.br",
+    "password": "12345689"
 }
 
 ###
