@@ -25,7 +25,7 @@ app.use(cors())
             photo,
             description,
             type,
-            author_id: authorId
+            author_id: 
          })
 
       res.status(201).send({ message })
