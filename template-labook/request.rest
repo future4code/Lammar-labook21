@@ -13,8 +13,8 @@ POST http://localhost:3003/post/create
 Content-Type: application/json
 
 {
-    "photo": "pracatiradentes.png",
-    "description": "Imagem da praça tiradentes de Curitiba",
+    "photo": "lua.png",
+    "description": "lua cheia vista em Curitiba.",
     "type": "normal",
-    "author_id": "f08a8e98-88a5-42ac-a6cc-67fc49277652"
+    "author_id": "f23a1dd8-6c8a-457ff745c4aa70a"
 }
