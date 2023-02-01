@@ -1,6 +1,7 @@
 import { PostDataBase } from "../data/PostDatabase";
 import { UserDatabase } from "../data/UserDatabase";
 import { CustomError } from "../error/CustomError";
+import { InvalidAuthor, InvalidType, NotAuthor, NotDescription, NotPhoto, NotType } from "../error/PostError";
 import { InvalidEmail, InvalidPassword, NotEmail, NotName, NotPassword } from "../error/UserError";
 import { post } from "../model/post/post";
 import { PostInputDTO } from "../model/post/postDTO";
@@ -14,15 +15,18 @@ export class PostBusiness {
             const { photo, description, type, author_id } = input
 
             if (!photo){
-                throw new Error("Insira uma imagem");
+                throw new NotPhoto;
             }else if(!description){
-                throw new Error("Insira uma descrição");
+                throw new NotDescription;
             }else if(!type){
-                throw new Error("Insira umm tipo válido");
+                throw new NotType;
+            }else if(type !== "normal" && type !== "event" && type !== "Normal" && type !== "Event" && type !== "NORMAL" && type !== "EVENT"){
+                throw new InvalidType;
             }else if(!author_id){
-                throw new Error("Insira uma autor");
-
+                throw new NotAuthor;
             }
+
+            console.log(author_id)
             const id = generateId()
             const post: post = {
                 id,

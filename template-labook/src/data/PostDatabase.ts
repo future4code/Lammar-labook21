@@ -13,6 +13,7 @@ export class PostDataBase extends BaseDatabase{
                 type: post.type,
                 author_id: post.author_id
             }).into('labook_posts')
+            
         } catch(error:any){
             throw new CustomError(error.statusCode, error.message)
         }
