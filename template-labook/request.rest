@@ -6,3 +6,14 @@ Content-Type: application/json
     "email": "brubzz@Labenu.com.br",
     "password": "12345689"
 }
+
+###
+POST http://localhost:3003/post/create
+Content-Type: application/json
+
+{
+    "photo": "jardimbotanico.png",
+    "description": "Imagem do jardim botanico do Curitiba",
+    "type": "normal",
+    "author_id": "f08a8e98-88a5-42ac-a6cc-67fc49277652"
+}
