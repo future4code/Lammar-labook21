@@ -1,10 +1,10 @@
-import express, { Express } from "express"
-import cors from "cors"
+import express from 'express'
+import cors from 'cors'
 
 /**************************** CONFIG ******************************/
 
 
-export const app: Express = express()
+export const app = express()
 
 app.use(express.json())
 app.use(cors())
