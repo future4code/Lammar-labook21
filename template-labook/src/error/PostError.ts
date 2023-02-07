@@ -30,3 +30,8 @@ export class InvalidAuthor extends CustomError{
         super(400, "Autor não encontrado no banco de dados")
     }
 }
+export class IdInvalid extends CustomError{
+    constructor(){
+        super(400, "Post não encontrado, favor inserir um id válido")
+    }
+}

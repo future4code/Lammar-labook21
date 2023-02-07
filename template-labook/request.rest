@@ -21,6 +21,6 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3003/post/posts/0832ac50-439b-48c5-9037-4c966c80c14b
+GET http://localhost:3003/post/posts/0832ac50-439
 
 
