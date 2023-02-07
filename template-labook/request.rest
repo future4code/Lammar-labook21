@@ -2,8 +2,8 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "Bruna2",
-    "email": "brubzz2@Labenu.com.br",
+    "name": "Teste1",
+    "email": "lamarr@Labenu.com.br",
     "password": "12345689"
 }
 
@@ -16,5 +16,11 @@ Content-Type: application/json
     "photo": "lua.png",
     "description": "lua cheia vista em Curitiba.",
     "type": "normal",
-    "author_id": "f23a1dd8-6c8a-457ff745c4aa70a"
+    "author_id": "1a65083e-19e9-4b20-bc0f-32e0110820b7"
 }
+
+###
+
+GET http://localhost:3003/post/posts/0832ac50-439b-48c5-9037-4c966c80c14b
+
+
