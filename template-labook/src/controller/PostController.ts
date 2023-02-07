@@ -27,9 +27,11 @@ export class PostController {
     public getPost = async (req:Request, res:Response)=>{
       try{
             const { id } = req.params
-            
+ 
             const postDataBase = new PostDataBase()
             const post = await postDataBase.getPost(id)
+
+
 
             res.status(201).send(post[0])
       }catch(error:any){

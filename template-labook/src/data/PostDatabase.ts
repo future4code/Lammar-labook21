@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { CustomError } from "../error/CustomError";
+import { IdInvalid } from "../error/PostError";
 import { post } from "../model/post/post";
 import { BaseDatabase } from "./BaseDatabase";
 
@@ -25,6 +26,10 @@ export class PostDataBase extends BaseDatabase{
             const queryResult = await PostDataBase.connection("labook_posts")
             .select("*")
             .where({ id })
+
+            if(queryResult.length < 1){
+                throw new IdInvalid
+            }
 
             return queryResult
 
