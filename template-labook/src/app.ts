@@ -5,7 +5,7 @@ import knex from 'knex'
 
 /**************************** CONFIG ******************************/
 
-/* dotenv.config()
+dotenv.config()
 
 export const connection= knex({
    client: "mysql",
@@ -17,7 +17,7 @@ export const connection= knex({
       port: 3306,
       multipleStatements: true
    }
-}) */
+})
 export const app = express()
 
 app.use(express.json())
