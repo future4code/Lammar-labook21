@@ -31,8 +31,6 @@ export class PostController {
             const postDataBase = new PostDataBase()
             const post = await postDataBase.getPost(id)
 
-
-
             res.status(201).send(post[0])
       }catch(error:any){
         throw new CustomError(error.statusCode, error.message)

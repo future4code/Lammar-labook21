@@ -23,4 +23,13 @@ Content-Type: application/json
 
 GET http://localhost:3003/post/posts/0832ac50-439
 
+###
+
+POST http://localhost:3003/user/friends
+Content-Type: application/json
+
+{
+    "friend1":"1a65083e-19e9-4b20-bc0f-32e0110820b7",
+    "friend2":"f08a8e98-88a5-42ac-a6cc-67fc49277652"
+}
 
