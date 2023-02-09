@@ -26,6 +26,7 @@ export class UserDatabase extends BaseDatabase{
                 friend1: friends.friend1,
                 friend2: friends.friend2
             }).into('labook_friends')
+            
         }catch(error:any){
             throw new CustomError(error.statusCode, error.message)
         }

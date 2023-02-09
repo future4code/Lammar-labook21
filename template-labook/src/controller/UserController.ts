@@ -29,7 +29,7 @@ export class UserController {
           friend1: req.body.friend1,
           friend2: req.body.friend2
         };
-
+        
         const userBusiness = new UserBusiness()
         await userBusiness.createFriends(input)
         
