@@ -17,6 +17,15 @@ connection
          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
          author_id VARCHAR(255),
          FOREIGN KEY (author_id) REFERENCES labook_users (id)
+      );
+
+      CREATE TABLE IF NOT EXISTS labook_friends(
+         id VARCHAR(255) PRIMARY KEY,
+         friend1 VARCHAR(255) NOT NULL,
+         FOREIGN KEY (friend1) REFERENCES labook_users(id),
+         friend2 VARCHAR(255) NOT NULL,
+         FOREIGN KEY (friend1) REFERENCES labook_users(id)
+
       )
    `)
    .then(() => {
